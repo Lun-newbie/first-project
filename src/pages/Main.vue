@@ -63,8 +63,72 @@ export default defineComponent({
           <input class="spectra__form__button" type="button" value="Send">
         </form>
       </div>
+      <div class="spectra__main">
+        <h1 class="spectra__main__logo">Our services</h1>
+        <p class="spectra__main__text">Createx Construction Bureau is a construction giant with a full range of
+          construction services.</p>
+        <div class="spectra__main__blocks">
+          <div class="spectra__main__block spectra__main__block-1">
+            <img src="@/assets/ic-construction-spectra.png" alt="#">
+            <p>Construction</p>
+          </div>
+          <div class="spectra__main__block spectra__main__block-2">
+            <img src="@/assets/ic-plan-spectra.svg" alt="#">
+            <p>Project Development</p>
+          </div>
+          <div class="spectra__main__block spectra__main__block-3">
+            <img src="@/assets/ic-pantone-spectra-white.png" alt="#">
+            <p>Interior Design</p>
+          </div>
+          <div class="spectra__main__block spectra__main__block-4">
+            <img src="@/assets/ic-painting-spectra.svg" alt="#">
+            <p>Repairs</p>
+          </div>
+        </div>
+      </div>
+      <div class="spectra__btm">
+        <div class="spectra__btm__text subtitle">Learn more about our services</div>
+        <a href="#" class="spectra__btm__button subutton">View services</a>
+      </div>
     </div>
 
+  </section>
+  <section class="works">
+    <div class="container">
+      <div class="works__slider">
+        <div class="works__wrapper">
+          <div class="works__slider__title">Browse our selected projects and learn more about our work</div>
+          <div class="control">
+            <img src="@/assets/prev-left-white.png" alt="#" class="control__white">
+            <img src="@/assets/prev-right-white.png" alt="#" class="control__white">
+            <img src="@/assets/hover-orange-left.png" alt="#" class="control__orange">
+            <img src="@/assets/hover-orange-right.png" alt="#" class="control__orange">
+          </div>
+        </div>
+        <div class="works__blocks">
+          <div class="works__block">
+            <div class="works__block__overlay">
+              <img src="@/assets/image-work-1.jpg" alt="#" class="works__block__img-one">
+              <div class="works__block__title">Red Finger Building</div>
+              <div class="works__block__text">Business Centers</div>
+              <p class="works__block__subutton">View Project</p>
+            </div>
+          </div>
+          <div class="works__block">
+            <img src="@/assets/image-work-2.png" alt="#" class="works__block__img-two">
+            <div class="works__block__title">Cubes Building</div>
+            <div class="works__block__text">Business Centers</div>
+            <p class="works__block__subutton">View Project</p>
+          </div>
+          <div class="works__block">
+            <img src="@/assets/image-work-3.png" alt="#" class="works__block__img-tre">
+            <div class="works__block__title">The Pencil Building</div>
+            <div class="works__block__text">Business Centers</div>
+            <p class="works__block__subutton">View Project</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 <style lang="scss">
@@ -172,6 +236,13 @@ export default defineComponent({
 
 .spectra {
   position: relative;
+  background-image: url("@/assets/bg-image-spectra.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  background-color: #E5E8ED;
+  padding-bottom: 5rem;
 
   &__header {
     position: absolute;
@@ -179,6 +250,7 @@ export default defineComponent({
     padding: 48px 60px;
     width: 100%;
     max-width: 76.875rem;
+    background-color: #FFFFFF;
 
     &__title {
       font-size: 1.75rem;
@@ -235,5 +307,224 @@ export default defineComponent({
       margin-top: 1.313rem;
     }
   }
+
+  //----------------------------------------------------------------------------
+  &__main {
+    padding-top: 13.25rem;
+
+    &__logo {
+      font-size: 2.875rem;
+      font-weight: 700;
+      line-height: 3.738rem;
+      text-align: center;
+      color: #1E212C;
+    }
+
+    &__text {
+      font-size: 1.125rem;
+      font-weight: 400;
+      line-height: 1.688rem;
+      text-align: center;
+      color: #787A80;
+
+    }
+
+    &__blocks {
+      margin-top: 60px;
+      display: flex;
+      gap: 1.875rem;
+
+    }
+
+    &__block {
+      width: 25%;
+      background-color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid #E5E8ED;
+      border-radius: 4px;
+
+      &:hover {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0.5)),
+        url("@/assets/image-spectra.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        color: #F4F5F6;
+      }
+
+      & p {
+        margin-top: 24px;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 30px;
+        text-align: center;
+        text-wrap: nowrap;
+        z-index: 2;
+      }
+
+      &-1 {
+        padding: 5.563rem 5rem;
+      }
+
+      &-2 {
+        padding: 5.563rem 2.531rem;
+      }
+
+      &-3 {
+        padding: 5.563rem 4.406rem;
+        position: relative;
+        background-image: url("@/assets/image-spectra.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        color: #ffffff;
+
+        & img {
+          z-index: 2;
+        }
+
+        &:before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: (rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0.5));
+        }
+
+      }
+
+      &-4 {
+        padding: 5.563rem 6.656rem;
+      }
+    }
+  }
+
+  &__btm {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    align-items: center;
+    margin-top: 5rem;
+  }
 }
+
+.subtitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 2.625rem;
+  text-align: left;
+}
+
+.subutton {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  border-radius: 0.625rem;
+  background-color: #FF5A30;
+  padding: 0 2.5rem;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #ff3200;
+  }
+}
+
+.works {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    align-items: flex-end;
+  }
+
+  &__slider {
+    margin-top: 7.5rem;
+
+    &__title {
+      width: 55%;
+      font-size: 2.875rem;
+      font-weight: 700;
+      line-height: 3.738rem;
+      text-align: left;
+      color: #1E212C;
+    }
+  }
+
+  &__blocks {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3.75rem;
+    margin-bottom: 80px;
+  }
+}
+
+.control {
+  &__white {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &__orange {
+    display: none;
+  }
+}
+
+.works__block {
+  overflow: hidden;
+  width: 100%;
+  height: 25rem;
+
+  &:hover &__overlay {
+    transform: translateY(-5rem);
+  }
+
+  &__overlay {
+    transition: transform ease 0.2s;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.875rem;
+    text-align: center;
+    color: #1E212C;
+
+  }
+
+  &__text {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.313rem;
+    text-align: center;
+    color: #787A80;
+
+  }
+
+  &__subutton {
+    margin: 1.5rem auto;
+    width: 50%;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 2.75rem;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #FF5A30;
+    border: 1px solid #FF5A30;
+    border-radius: 4px;
+  }
+
+}
+
 </style>
