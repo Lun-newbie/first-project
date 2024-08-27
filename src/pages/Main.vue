@@ -1,10 +1,12 @@
 <script>
 import Slider from "@/components/Slider.vue"
 import {defineComponent} from "vue";
+import Footer from "@/components/Footer.vue";
 
 export default defineComponent({
   components: {
-    Slider
+    Slider,
+    Footer
   }
 })
 
@@ -99,10 +101,20 @@ export default defineComponent({
         <div class="works__wrapper">
           <div class="works__slider__title">Browse our selected projects and learn more about our work</div>
           <div class="control">
-            <img src="@/assets/prev-left-white.png" alt="#" class="control__white">
-            <img src="@/assets/prev-right-white.png" alt="#" class="control__white">
-            <img src="@/assets/hover-orange-left.png" alt="#" class="control__orange">
-            <img src="@/assets/hover-orange-right.png" alt="#" class="control__orange">
+            <div class="control__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="21" fill="currentColor"
+                   class="control__arrow__item" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                      d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+              </svg>
+            </div>
+            <div class="control__arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="21" fill="currentColor"
+                   class="control__arrow__item control__arrow__right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                      d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+              </svg>
+            </div>
           </div>
         </div>
         <div class="works__blocks">
@@ -115,21 +127,90 @@ export default defineComponent({
             </div>
           </div>
           <div class="works__block">
-            <img src="@/assets/image-work-2.png" alt="#" class="works__block__img-two">
-            <div class="works__block__title">Cubes Building</div>
-            <div class="works__block__text">Business Centers</div>
-            <p class="works__block__subutton">View Project</p>
+            <div class="works__block__overlay">
+              <img src="@/assets/image-work-2.png" alt="#" class="works__block__img-two">
+              <div class="works__block__title">Cubes Building</div>
+              <div class="works__block__text">Business Centers</div>
+              <p class="works__block__subutton">View Project</p>
+            </div>
           </div>
           <div class="works__block">
-            <img src="@/assets/image-work-3.png" alt="#" class="works__block__img-tre">
-            <div class="works__block__title">The Pencil Building</div>
-            <div class="works__block__text">Business Centers</div>
-            <p class="works__block__subutton">View Project</p>
+            <div class="works__block__overlay">
+              <img src="@/assets/image-work-3.png" alt="#" class="works__block__img-tre">
+              <div class="works__block__title">The Pencil Building</div>
+              <div class="works__block__text">Business Centers</div>
+              <p class="works__block__subutton">View Project</p>
+            </div>
           </div>
+        </div>
+        <div class="works__btn">
+          <div class="subtitle">Explore all our works</div>
+          <a class="subutton">View portfolio</a>
         </div>
       </div>
     </div>
   </section>
+  <section class="support">
+    <div class="container">
+      <h1 class="support__logo">Supported by 12+ partners</h1>
+      <div class="support__client">
+        <div class="support__client__item">
+          <img src="@/assets/client-logo.svg" alt="">
+        </div>
+        <div class="support__client__item">
+          <img src="@/assets/client-logo%20(2).svg" alt="">
+        </div>
+        <div class="support__client__item">
+          <img src="@/assets/client-logo%20(1).svg" alt="">
+        </div>
+        <div class="support__client__item">
+          <img src="@/assets/client-logo%20(3).svg" alt="">
+        </div>
+        <div class="support__client__item">
+          <img src="@/assets/client-logo%20(4).svg" alt="">
+        </div>
+        <div class="support__client__item">
+          <img src="@/assets/client-logo%20(5).svg" alt="">
+        </div>
+      </div>
+      <div class="client">
+        <div class="client__review">
+          <h1 class="client__review__title">What our clients are saying</h1>
+          <img src="@/assets/profile-image.png" alt="123" class="client__review__img">
+          <div class="client__review__comments">Ipsum aute sunt aliquip aute et occaecat. Anim minim do cillum
+            eiusmod enim. Consectetur magna cillum consequat minim laboris cillum laboris voluptate minim proident
+            exercitation ullamco.
+          </div>
+          <div class="client__review__portfolio">
+            <div class="client__review__block">
+              <div class="client__review__name">Shawn Edwards</div>
+              <div class="client__review__info">Position, Company name</div>
+            </div>
+            <div class="control">
+              <div class="control__arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="21" fill="currentColor"
+                     class="control__arrow__item" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                        d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                </svg>
+              </div>
+              <div class="control__arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="21" fill="currentColor"
+                     class="control__arrow__item control__arrow__right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                        d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="client__img">
+          <img src="@/assets/client-image.jpg" alt="#">
+        </div>
+      </div>
+    </div>
+  </section>
+  <Footer></Footer>
 </template>
 <style lang="scss">
 .values {
@@ -434,6 +515,7 @@ export default defineComponent({
   background-color: #FF5A30;
   padding: 0 2.5rem;
   text-decoration: none;
+  border: none;
 
   &:hover {
     background-color: #ff3200;
@@ -467,64 +549,157 @@ export default defineComponent({
     margin-top: 3.75rem;
     margin-bottom: 80px;
   }
+
+  &__block {
+    overflow: hidden;
+    width: 100%;
+    height: 25rem;
+
+    &:hover &__overlay {
+      transform: translateY(-5rem);
+    }
+
+    &__overlay {
+      transition: transform ease 0.2s;
+    }
+
+    &__title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.875rem;
+      text-align: center;
+      color: #1E212C;
+
+    }
+
+    &__text {
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1.313rem;
+      text-align: center;
+      color: #787A80;
+
+    }
+
+    &__subutton {
+      margin: 1.5rem auto;
+      width: 50%;
+      text-transform: uppercase;
+      font-size: 0.875rem;
+      font-weight: 700;
+      line-height: 2.75rem;
+      letter-spacing: 0.5px;
+      text-align: center;
+      color: #FF5A30;
+      border: 1px solid #FF5A30;
+      border-radius: 4px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 7.5rem;
+    gap: 40px;
+    align-items: center;
+  }
 }
 
 .control {
-  &__white {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
+  display: flex;
 
-  &__orange {
-    display: none;
+  &__arrow {
+    padding: 12.5px 11px;
+
+    &:hover {
+      background-color: #ff3200;
+      border-radius: 50%;
+      fill: #FF5A30;
+    }
+
+    &__right {
+      transform: rotate(180deg);
+
+    }
+
+    &__item {
+
+      &:hover {
+        fill: #E5E8ED;
+      }
+    }
   }
 }
 
-.works__block {
-  overflow: hidden;
-  width: 100%;
-  height: 25rem;
+.support {
+  background-color: #F4F5F6;
+  padding-top: 5rem;
 
-  &:hover &__overlay {
-    transform: translateY(-5rem);
-  }
-
-  &__overlay {
-    transition: transform ease 0.2s;
-  }
-
-  &__title {
-    font-size: 1.25rem;
+  &__logo {
+    font-size: 2.875rem;
     font-weight: 700;
-    line-height: 1.875rem;
+    line-height: 3.738rem;
     text-align: center;
-    color: #1E212C;
-
+    margin-bottom: 3.75rem;
   }
 
-  &__text {
-    font-size: 0.875rem;
-    font-weight: 400;
-    line-height: 1.313rem;
-    text-align: center;
-    color: #787A80;
-
+  &__client {
+    display: flex;
+    justify-content: space-between;
   }
+}
 
-  &__subutton {
-    margin: 1.5rem auto;
-    width: 50%;
-    text-transform: uppercase;
-    font-size: 0.875rem;
-    font-weight: 700;
-    line-height: 2.75rem;
-    letter-spacing: 0.5px;
-    text-align: center;
-    color: #FF5A30;
-    border: 1px solid #FF5A30;
-    border-radius: 4px;
+.client {
+  margin-top: 10.625rem;
+  display: flex;
+  justify-content: space-between;
+
+  &__review {
+    width: 53%;
+
+    &__title {
+      font-size: 2.875rem;
+      font-weight: 700;
+      line-height: 3.738rem;
+      text-align: left;
+    }
+
+    &__img {
+      margin-top: 3.75rem;
+    }
+
+    &__comments {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.6rem;
+      text-align: left;
+      margin-top: 1.5rem;
+
+    }
+
+    &__name {
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.6rem;
+      text-align: left;
+    }
+
+    &__info {
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1.313rem;
+      text-align: left;
+      color: #9FA0A3;
+
+    }
+
+    &__portfolio {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1.5rem;
+    }
   }
-
 }
 
 </style>

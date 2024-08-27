@@ -1,5 +1,6 @@
 <template>
-  <div class="slider">
+  <div class="slider" :style="getBg">
+    {{getBg}}
     <div class="container">
       <h1 class="slider__logo">create<span>x</span> construction</h1>
       <p class="slider__text">Cras ultrices leo vitae non viverra. Fringilla nisi quisque consequat, dignissim vitae
@@ -16,20 +17,38 @@
         <div class="slider__page">4</div>
       </div>
     </div>
-  </div></template>
+  </div>
+</template>
 
-<script setup>
+<script>
+export default {
+  name: "Slider",
+  setup() {
+    const items = [
+      {path: '1.jpg', checked: true},
+      {path: '2.jpg', checked: false},
+      {path: '3.jpg', checked: false},
+      {path: '4.jpg', checked: false},
+    ]
 
+    return {items}
+  },
+  computed: {
+    getBg(){
+      let path = this.items.find((item) => item.checked).path;
+      return {backgroundImage:`@/assets/slider/${path}`}
+    }
+  }
+}
 </script>
 
 <style scoped lang="scss">
 .slider {
-  background-image: url("@/assets/bg-image (1).jpg");
+  //background-image: url("@/assets/bg-image (1).jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  /*height: 988px;*/
   max-height: 100%;
   padding-top: 13.75rem;
   padding-bottom: 7.5rem;
