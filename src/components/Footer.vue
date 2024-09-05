@@ -146,6 +146,7 @@
     width: 1.5rem;
     height: 1.5rem;
     margin-right: 12px;
+    accent-color: #ff0000;
 
   }
 

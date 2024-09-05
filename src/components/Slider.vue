@@ -1,6 +1,6 @@
 <template>
   <div class="slider" :style="getBg">
-    {{getBg}}
+    <!--    {{ getBg }}-->
     <div class="container">
       <h1 class="slider__logo">create<span>x</span> construction</h1>
       <p class="slider__text">Cras ultrices leo vitae non viverra. Fringilla nisi quisque consequat, dignissim vitae
@@ -34,17 +34,19 @@ export default {
     return {items}
   },
   computed: {
-    getBg(){
-      let path = this.items.find((item) => item.checked).path;
-      return {backgroundImage:`@/assets/slider/${path}`}
+    getBg() {
+      // let path = this.items.find((item) => item.checked.path);
+      // return {backgroundImage: 'url(@/assets/slider/1.jpg)'};
+
     }
   }
 }
+
 </script>
 
 <style scoped lang="scss">
 .slider {
-  //background-image: url("@/assets/bg-image (1).jpg");
+  background-image: url("@/assets/slider/1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
